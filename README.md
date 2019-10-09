@@ -27,8 +27,12 @@ To get all our files, we’ll do the following things. This workflow goes throug
 Create a folder named “InternetArchive” on your computer Desktop. This is where the downloaded where files will go. 
 
     1. Step B: Create a file with the list of identifiers
+    
+## Create a text file with items from archive.org
+
 We need to create a text file with the list of archive.org item identifiers from which we want to download files. This file will be used by the wget to download the files. To do this, follow the steps below:
-Use the advanced search on Archive.org to create the list and then download the list in the file. So, for example, if you want to search for “Native American Literature,” type that into the advanced search. If you’d like to narrow your search by including a date range or other available options, include those requirements in your original search. 
+
+1. Use the advanced search on Archive.org to create the list and then download the list in the file. So, for example, if you want to search for “Native American Literature,” type that into the advanced search. If you’d like to narrow your search by including a date range or other available options, include those requirements in your original search. 
 
 1. Once you’ve figured out your search, go the “Advanced Search returning JSON, XML, and more” section to create your query. Select “identifier” from the “Fields to return” list. Optionally sort the results by “identifier asc” 
 
@@ -42,7 +46,7 @@ Use the advanced search on Archive.org to create the list and then download the 
 1. Open the file in a text editor like TextEdit or Atom. Delete the first line which reads “identifier.” Now, remove all quotes by searching and replacing “ with nothing. 
 Your itemlist.txt file should look like this: 
 
-1. Use wget to return the full text results from your itemlist.txt file 
+## Use wget to return the full text results from your itemlist.txt file 
 Open your terminal window and navigate to your “Internet_Archive” folder. This can be done in a few steps. 
 1. Open your command line
 1. If your “Internet_Archive” folder is on your desktop, type “cd desktop” 
