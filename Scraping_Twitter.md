@@ -58,6 +58,10 @@ Then, publish your spreadsheet to the web under the “File” tab
 
 Return to the “Summary” tab in your TAGS sheet. You can now click “TAGS Explorer” and see an interactive network analysis visualization of the users who are tweeting about your selected hashtag. 
 
+![Network_Analysis](Network_Analysis.png)
+
 Now Click “TAGS Archive” in the “Summary” tab. You’ll now see a searchable archive of tweets, and user images. 
+
+![TAGS_Searchable_Twitter_Archive](TAGS_Searchable_Twitter_Archive.png)
 
 
