@@ -25,10 +25,10 @@ Gather tweets under a certain hashtag (e.g. #econbiz)
 ![tabs](tabs.png)
 
 1. Fill out the Advanced Search
-If you made it through installation -- congrats! You’re ready to start your search. TAGS can collect tweets by hashtags (e.g. #econbiz) or by 
-1. Try searching for a hashtag in the “Enter Term” box
-1. Once you type in a hashtag, click the “TAGS” tab and then click “Run now!” 
-1. If the script runs correctly, click the “Archive” tab on your spreadsheet. Do you see all the tweets you collected? 
+If you made it through installation -- congrats! You’re ready to start your search. TAGS can collect tweets by hashtags, user names, mentions, and more (e.g. #econbiz).
+* Try searching for a hashtag in the “Enter Term” box
+* Once you type in a hashtag, click the “TAGS” tab and then click “Run now!” 
+* If the script runs correctly, click the “Archive” tab on your spreadsheet. Do you see all the tweets you collected? 
 
 ## Study the Tweets
 
