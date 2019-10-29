@@ -30,7 +30,6 @@ If you made it through installation -- congrats! You’re ready to start your se
 1. Once you type in a hashtag, click the “TAGS” tab and then click “Run now!” 
 1. If the script runs correctly, click the “Archive” tab on your spreadsheet. Do you see all the tweets you collected? 
 
-
 ## Study the Tweets
 
 ### In the “Dashboard” tab, you should see some trends. 
