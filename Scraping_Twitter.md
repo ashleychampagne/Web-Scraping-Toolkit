@@ -16,10 +16,14 @@ Gather tweets under a certain hashtag (e.g. #econbiz)
 
 1. To download TAGS v6.1 and “Copy the Spreadsheet” when you see the prompt.
 1. Now, rename your spreadsheet from “Copy of TAGS v6.1.9.1” to whatever you’d like to call it.
+
 ![v6](set_up_access.png)
 
-1. Set up Twitter access - choose “easy” setup. (This is where you need your twitter account, and you’ll need to sign in and allow access). 
+1. Set up Twitter access - choose “easy” setup. (This is where you need your twitter account, and you’ll need to sign in and allow access).
 1. Finally, return to the “TAGS” tab and click “Add Summary Sheet” and “Add Dashboard Sheet” right away so that the tabs on the bottom of your spreadsheet look like this: 
+
+![tags](tabs.png)
+
 1. Fill out the Advanced Search
 If you made it through installation -- congrats! You’re ready to start your search. TAGS can collect tweets by hashtags (e.g. #econbiz) or by 
 1. Try searching for a hashtag in the “Enter Term” box
