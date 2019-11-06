@@ -12,8 +12,11 @@ Import-io is a point and click tool that you can use to collect content from web
     * Create a CSV or Excel XLSX file of URLs that you want to grab. 
     * Click the extractor you made based on one URL and click “settings” on the page.
     * Click “extract from an explicit list of URLs” and upload your CSV or Excel XLSX file of urls. 
+![lh5](https://lh5.googleusercontent.com/WWnWcprEed3yB9JxYM74dmQ0WdcScLwMFYBDp-GKQKzf_pwpCqfwaCHaEvq1qYkLkUfTgW2XKJuJcC5csLW81DB07Wqe_IDmTM1lXDp1)
     * Click “run URLs” to have the extractor crawl through every URL in the same way you originally trained it.
     * Download the data as a .xlsx file.
+    
+    ![lh5](https://lh6.googleusercontent.com/a26dFwUyKvAwdkAvCQLUcb4VQ2-VOJAB3jo9FCfFTHt-c97vbmcWtNouEH8Xt9x-JcJ_V21KWt_QH4ycYhgyFFj9g6Ntn62xop8Q1PYk)
     * Open your spreadsheet
 
 How does it look? Do you need to clean your data? 
