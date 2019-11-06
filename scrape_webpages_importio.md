@@ -9,12 +9,12 @@ Import-io is a point and click tool that you can use to collect content from web
 1. Click on a “new column” when you want to add text that you’d like to separate out. So, if you’d like the article body separate from the author, you’ll want to create separate columns for “article body” and for “author.” 
 1. Save your extracter as a name you’ll recognize in the future. Once you’ve saved your extractor, it should appear within the right hand side of your browser. 
 1. Upload a list of URLs with similar content that you want to grab:
-* Create a CSV or Excel XLSX file of URLs that you want to grab. 
-* Click the extractor you made based on one URL and click “settings” on the page.
-* Click “extract from an explicit list of URLs” and upload your CSV or Excel XLSX file of urls. 
-* Click “run URLs” to have the extractor crawl through every URL in the same way you originally trained it.
-* Download the data as a .xlsx file.
-* Open your spreadsheet
+    * Create a CSV or Excel XLSX file of URLs that you want to grab. 
+    * Click the extractor you made based on one URL and click “settings” on the page.
+    * Click “extract from an explicit list of URLs” and upload your CSV or Excel XLSX file of urls. 
+    * Click “run URLs” to have the extractor crawl through every URL in the same way you originally trained it.
+    * Download the data as a .xlsx file.
+    * Open your spreadsheet
 
 How does it look? Do you need to clean your data? 
 If you’re using your files for text mining, it can be helpful to have your data in plain text files rather than a spreadsheet, and have each text in individual files like the Documenting the South dataset from University of North Carolina.
