@@ -28,13 +28,13 @@ Open the OpenRefine interface:
 * On a Mac: Open OpenRefine in Applications. It will open up a tab in your web browser. 
 
 1. Once you are in the OpenRefine interface, click “Create Project” and upload the spreadsheet you recently finished editing. Click "Next" and then Create Project" again.
-* Pubdate: We can change the pubdates to UTC format (e.g., 2016-01-01T00:00:00Z).
+1. Pubdate: We can change the pubdates to UTC format (e.g., 2016-01-01T00:00:00Z).
 To change this, mouse over the arrow at the top of the pubdate column. 
 Select Edit Cells > Common transforms > To date. This should change all of the dates in the column to UTC format.   
-* Make sure there is no whitespace in any of your columns:
+1. Make sure there is no whitespace in any of your columns:
 Open that column's drop down menu, and select "Edit Cells" > "Common transformations" > "trim leading and trailing whitespace”. 
 Within the “article body” column, select “Edit Cells” > “Common transformations” > “Collapse consecutive whitespace”
-* Export your cleaned data as a .xls document. 
+1. Export your cleaned data as a .xls document. 
 
 ## Separate the texts into individual plain text files for text analysis 
 
