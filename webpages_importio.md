@@ -16,7 +16,7 @@ Import-io is a point and click tool that you can use to collect content from web
     * Click “run URLs” to have the extractor crawl through every URL in the same way you originally trained it.
     * Download the data as a .xlsx file.
     
-    ![lh5](https://lh6.googleusercontent.com/a26dFwUyKvAwdkAvCQLUcb4VQ2-VOJAB3jo9FCfFTHt-c97vbmcWtNouEH8Xt9x-JcJ_V21KWt_QH4ycYhgyFFj9g6Ntn62xop8Q1PYk)
+![lh5](https://lh6.googleusercontent.com/a26dFwUyKvAwdkAvCQLUcb4VQ2-VOJAB3jo9FCfFTHt-c97vbmcWtNouEH8Xt9x-JcJ_V21KWt_QH4ycYhgyFFj9g6Ntn62xop8Q1PYk)
     * Open your spreadsheet
 
 How does it look? Do you need to clean your data? 
