@@ -39,6 +39,8 @@ Open that column's drop down menu, and select "Edit Cells" > "Common transformat
 Within the “article body” column, select “Edit Cells” > “Common transformations” > “Collapse consecutive whitespace”
 1. Export your cleaned data as a .xls document. 
 
+![lh6](https://lh6.googleusercontent.com/CnX90Hwxq4VOKTSSKQm1-PixjYCdysnrRbhybpjQcgF04_Nhq0yPy606W6rqelbPesNfpmLINYSbCHHdLw6-5WfCXlU0218scDIm5c6o)
+
 ## Separate the texts into individual plain text files for text analysis 
 
 1. Open a Word document that you will name, and paste (unformated) in the contents of the columns you exported from open refine. This will create a file with all the articles (beginning with date, author, title preceding the article body or whatever column order you’re using). Individual articles are separated from each other by a return (the only use of returns in the file).  
