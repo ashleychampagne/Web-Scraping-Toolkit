@@ -12,4 +12,7 @@ _This page provides instructions for collecting articles from the Guardian. It w
 ### Workflow Steps:
 #### 1. Use the Guardian API to get data
 * Get a Guardian API Key if you don't have one ([request developer key](https://open-platform.theguardian.com/access/)).
+* Search The Guardian using the Guardian's API Console: 
+    In a web browser, go to the URL of the Guardian's "Open Platform API Console" (beta version, not the old version): <http://open-platform.theguardian.com/explore/>
+    ![API_UI](Images/Images/Guardian_API_UI.png)
 * 
