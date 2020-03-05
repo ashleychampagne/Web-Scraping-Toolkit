@@ -74,3 +74,4 @@ When Word shows the dialogue for conversion to plain text, choose "other encodin
 You can use [Lexos](http://lexos.wheatoncollege.edu/upload) to cut your plain text file at the delimiter (@@@@@@@@@@), and then download the cut files into individual plain text documents. The value of this is that you can now explore the corpus you’ve created down to the document level. 
 1. Finally, check the folder icon at the top of the Lexos page. Do you see your files? Download your files. You should now have a folder with individual plain text files of each document. 
 
+![lexos](Images/Guardian/lexos.png)
