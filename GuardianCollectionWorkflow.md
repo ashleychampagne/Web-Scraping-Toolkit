@@ -64,4 +64,13 @@ returned by your search parameters, including the URLs for the pages found.  The
 5. Export your cleaned data as a .xls document. 
 ![clean_data](Images/Guardian/clean_data.png)
 
+#### 4. Separate the texts into individual plain text files for text analysis 
+
+1. Open a Word document that you will name, and paste (unformated) in the contents of the columns you exported from open refine. This will create a file with all the articles (beginning with date, author, title preceding the article body or whatever column order you’re using). Individual articles are separated from each other by a return (the only use of returns in the file).  
+1. Using Word's find-and-replace function, replace all returns (found by searching for "^13") with three spaces, followed by ten "@" signs, followed by two returns ("   ^13^13@@@@@@@@@@").  This creates an easy-to-recognize and -manipulate delimiter between individual articles in the aggregate file. 
+1. Finally, save or export the.docx Word file as a .txt file (e.g., save as “aggregate-plain-txt”) as follows: 
+When Word shows the dialogue for conversion to plain text, choose "other encoding" > "Unicode UTF8" (i.e., do not choose "Windows default").
+1. There are a number of tools to chop one file into multiple files using a specific delimiter. In our case, our delimiter is the ten "@" signs (@@@@@@@@@@) between each of our articles. 
+You can use [Lexos](http://lexos.wheatoncollege.edu/upload) to cut your plain text file at the delimiter (@@@@@@@@@@), and then download the cut files into individual plain text documents. The value of this is that you can now explore the corpus you’ve created down to the document level. 
+1. Finally, check the folder icon at the top of the Lexos page. Do you see your files? Download your files. You should now have a folder with individual plain text files of each document. 
 
