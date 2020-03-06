@@ -38,4 +38,4 @@ _This workflow will allow you to split the contents of a spreadsheet into severa
     ~~~
     split -a4 -l1 my_data.txt row
     ~~~
-* You're done! Navigate to your folder and confirm that a .txt file has been created for each row of your spreadsheets. The filed for rows 1, 2, ..., 456976 will be named rowaaaa.txt, rowaaab.txt, ..., rowzzzz.txt respectively. 
+* You're done! Navigate to your folder and confirm that a .txt file has been created for each row of your spreadsheets. The files for rows 1, 2, ..., 456976 will be named rowaaaa.txt, rowaaab.txt, ..., rowzzzz.txt respectively. 
