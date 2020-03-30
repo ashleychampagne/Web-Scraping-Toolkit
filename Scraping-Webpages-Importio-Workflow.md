@@ -12,12 +12,17 @@ Import-io is a point and click tool that you can use to collect content from web
     * Create a CSV or Excel XLSX file of URLs that you want to grab. 
     * Click the extractor you made based on one URL and click “settings” on the page.
     * Click “extract from an explicit list of URLs” and upload your CSV or Excel XLSX file of urls. 
-    ![lh5](https://lh5.googleusercontent.com/WWnWcprEed3yB9JxYM74dmQ0WdcScLwMFYBDp-GKQKzf_pwpCqfwaCHaEvq1qYkLkUfTgW2XKJuJcC5csLW81DB07Wqe_IDmTM1lXDp1)
+    
+    ![urls](Images/Importio/urls.png)
+    
     * Click “run URLs” to have the extractor crawl through every URL in the same way you originally trained it.
     * Download the data as a .xlsx file.
+    
+    ![results](Images/Importio/results.png)
+    
     * Open your spreadsheet
     
-    ![lh5](https://lh5.googleusercontent.com/vFXU2gQuKHq9Y7Kaso4BNzKzdGTDJiEpCSBv_D2uuZE6_TUjCrEeyEI25jR7bYz1BfB9meQCsT1cAf2lNZWnN3YtQXUs8CExCS2LaOp_)
+    ![spreadsheet](Images/Importio/spreadsheet.png)
 
 How does it look? Do you need to clean your data? 
 If you’re using your files for text mining, it can be helpful to have your data in plain text files rather than a spreadsheet, and have each text in individual files like the Documenting the South dataset from University of North Carolina.
@@ -39,7 +44,7 @@ Open that column's drop down menu, and select "Edit Cells" > "Common transformat
 Within the “article body” column, select “Edit Cells” > “Common transformations” > “Collapse consecutive whitespace”
 1. Export your cleaned data as a .xls document. 
 
-![lh6](https://lh6.googleusercontent.com/CnX90Hwxq4VOKTSSKQm1-PixjYCdysnrRbhybpjQcgF04_Nhq0yPy606W6rqelbPesNfpmLINYSbCHHdLw6-5WfCXlU0218scDIm5c6o)
+![cleaned](Images/Importio/cleaned.png)
 
 ## Separate the texts into individual plain text files for text analysis 
 
@@ -49,5 +54,8 @@ Within the “article body” column, select “Edit Cells” > “Common transf
 When Word shows the dialogue for conversion to plain text, choose "other encoding" > "Unicode UTF8" (i.e., do not choose "Windows default").
 1. There are a number of tools to chop one file into multiple files using a specific delimiter. In our case, our delimiter is the ten "@" signs (@@@@@@@@@@) between each of our articles. 
 You can use [Lexos](http://lexos.wheatoncollege.edu/upload) to cut your plain text file at the delimiter (@@@@@@@@@@), and then download the cut files into individual plain text documents. The value of this is that you can now explore the corpus you’ve created down to the document level. 
+
+![lexos](Images/Importio/lexos.png)
+
 1. Finally, check the folder icon at the top of the Lexos page. Do you see your files? Download your files. You should now have a folder with individual plain text files of each document. 
 
