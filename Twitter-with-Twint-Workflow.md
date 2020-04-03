@@ -2,7 +2,7 @@
 _This workflow will guide you through the process of using the [Twint library](https://github.com/twintproject/twint) to mine data from Twitter. Last updated April 2020._
 ***
 ### Is Twint the Right Tool for my Project?
-Twint is fundimentally more technical and less user friendly than [the Twitter API](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Twitter-API-Workflow.md). Therefore, you should use the Twitter API when possible to save yourself work. That said, Twint offers fewer restrictions than the API. Use Twint if:
+Twint is fundamentally more technical and less user friendly than [the Twitter API](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Twitter-API-Workflow.md). Therefore, you should use the Twitter API when possible to save yourself work. That said, Twint offers fewer restrictions than the API. Use Twint if:
 * You need to mine tweets that are more than a week old. The Twitter API only allows you to access tweets from the last week or to set criteria to record future tweets as they are published. 
 * You need to collect more than 3,200 tweets. The Twitter API will return a maximum of 3,200 tweets.
 * You want to be anonymous. The Twitter API requires you to sign in with a Twitter account.
