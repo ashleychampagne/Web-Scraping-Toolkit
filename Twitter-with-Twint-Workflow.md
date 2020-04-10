@@ -27,7 +27,7 @@ To use Twint, type "twint" into terminal followed by your search parameter. Type
 ##### Useful parameters
 * Search for tweets from specific users:
     Include "-u " followed by the username the of twitter user you want to search for tweets from.
-    For example, the following command accesses all of the tweets from Elon Musk:
+    For example, the following command accesses all of the tweets from Elon Musk. Note that Elon Musk has **many** tweets so this may take a couple minutes to run. You can interupt any search using control-z. 
     ~~~
     twint -u elonmusk
     ~~~
@@ -35,6 +35,10 @@ To use Twint, type "twint" into terminal followed by your search parameter. Type
     Include "-s " followed by a word or phrase in quotes. For example, the following command accesses all of the tweets from Elon Musk that mention the word spacex.
     ~~~
     twint -u elonmusk -s "spacex"
+    ~~~
+    You can also use -s to search for tweets with a certian hashtag by including the # in the searchterm. To search for only those tweets that include the hashtag #spacex simply modify the above command to the following.
+    ~~~
+    twint -u elonmusk -s "#spacex"
     ~~~
 * Search for geotagged tweets from a specific geolocation:
     Include -g followed by lattitude, longitude, and a radius with commas between them and a single pair of quotes around all three. The coordinates of a location can be easily found by right clicking on a location on [Google Maps](https://www.google.com/maps) and selecting "what's here?" For example, the following command accesses all of the tweets that mention the word spacex and are geotagged within two kilometers of the SpaceX launch complex in Cape Canaveral, Florida:
@@ -58,3 +62,4 @@ twint -u elonmusk -s "spacex" -o "tweets.csv" --csv
 ### Separating each tweet into a text file:
 If you want to split each tweet into its own text file, follow the instructions above to save the tweets into a .txt file. Then, begin on step 3 of [this workflow](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Spreadsheet-Splitting-Workflow.md).
     
+
