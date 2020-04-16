@@ -66,6 +66,8 @@ returned by your search parameters, including the URLs for the pages found.  The
 
 #### 4. Separate the texts into individual plain text files for text analysis 
 
+_An alternative and more efficient method to acomplish step four is avalible [here](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Spreadsheet-Splitting-Workflow.md). The Lexos method below is only reccomended if you are on a Windows machine that does not have Git installed. If you are on Mac, Linux, or Windows with Git installed it will be easier to use the linked workflow._
+
 1. Open a Word document that you will name, and paste (unformated) in the contents of the columns you exported from open refine. This will create a file with all the articles (beginning with date, author, title preceding the article body or whatever column order you’re using). Individual articles are separated from each other by a return (the only use of returns in the file).  
 1. Using Word's find-and-replace function, replace all returns (found by searching for "^13") with three spaces, followed by ten "@" signs, followed by two returns ("   ^13^13@@@@@@@@@@").  This creates an easy-to-recognize and -manipulate delimiter between individual articles in the aggregate file. 
 1. Finally, save or export the.docx Word file as a .txt file (e.g., save as “aggregate-plain-txt”) as follows: 
