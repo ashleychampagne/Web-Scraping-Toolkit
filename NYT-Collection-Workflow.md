@@ -70,3 +70,5 @@ See [details of access by time range](http://www.nytimes.com/ref/membercenter/ny
         * Within the “article body” column, select “Edit Cells” > “Common transformations” > “Collapse consecutive whitespace”
     5. Export your cleaned data as a .xls document. 
     ![clean_data](Images/NYT/clean_data.png)
+    
+_If you want to split your spreadsheet into individual text files, a workflow explaining how to do so is avalible [here](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Spreadsheet-Splitting-Workflow.md)._
