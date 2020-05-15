@@ -70,7 +70,7 @@ Often, you will want to scrape data from a number of pages which are all linked 
     # Create a veriable to track whether a next link exists
     exists_next = True 
     
-    # Run this loop until we break it
+    # Run this loop until there is no "next" link
     while exists_next:
     	exists_next = False 
     	# pause for 5 seconds every time the loop repeats 
@@ -136,9 +136,140 @@ Now we want to scrape data from each page in page_urls. This process will look s
     				print entry.text    
     ~~~
     This code prints out the data for Afghanistan: 
-    ![Afghanistan](Afghanistan.png)
+    ![Afghanistan](/Images/BeautifulSoup/Afghanistan.png)
 * The next step would be to simply repeat this code in a loop as to scrape data for each country. However, printing data to the consol is not very useful. We will hold off on scraping ever country until we know how to store the data in a spreadsheet.
 
 #### 3. Storing the data in a .csv file
+Finally, we want to use a loop to scrape data from every page we found. 
+* Add "import csv" to the dependecies at the beggining of your code
+* Write csv rows one at a time using the writerow function. This function takes a row of values to be included in the row. 
+* For our example site, the code looks like this. This code takes about 25 minutes to run due to the 5 second pause between scraping each page. 
+    ~~~
+    # Create an output csv file
+    with open('output.csv', 'w') as file:
+    	# Create a writer
+    	writer = csv.writer(file)
+    	# Create a header row
+    	writer.writerow(['url', 'Country', 'Population', 'Area'])
+    
+    	# For each country page
+    	for url in page_urls:
+    		# pause as not to exceed the rate limit
+    		time.sleep(5)
+    		# load the page
+    		page = requests.get(url)
+    		# create soup
+    		soup = BeautifulSoup(page.content, features='lxml')
+    
+    		# create variables for each data point
+    		country = ''
+    		area = ''
+    		population = ''
+    
+    		# for each tr tag
+    		for row in soup.find_all('tr'):
+    			# for each data entry in that row
+    			for entry in row.find_all('td'):
+    				# check for the class of intrest
+    				if (entry['class'][0] == 'w2p_fw'):
+    					# save data if it is what we are looking for
+    					if row['id'] == 'places_area__row':
+    						area =  entry.text
+    					elif row['id'] == 'places_population__row':
+    						population =  entry.text
+    					elif row['id'] == 'places_country__row':
+    						country =  entry.text	
+    		# Write the data to the csv
+    		writer.writerow([url, country, population, area])
+    ~~~
+* The scraped data will be stored in a spreadsheet called output.csv:
+    ![spreadsheet](/Images/BeautifulSoup/spreadsheet.png)
+
+### Conclusion
+Below is all of the code used in this workflow. It successfully scrapes area and population data from http://example.webscraping.com/ and writes it to a spreadsheet. This is a very specific case, but hopefully this example helps you to understand the tools that beautiful soup provides and gives you insight to how you might use them for your own project. 
+~~~
+# Install dependencies 
+import requests
+from bs4 import BeautifulSoup
+import time
+import csv
+
+# Define the homepage url 
+homepage_url = 'http://example.webscraping.com' 
+
+# Create a list of country page urls to build
+page_urls = []
+
+# Create a variable to store the url of the page we are searching
+url_to_search = homepage_url
+
+# Create a veriable to track whether a next link exists
+exists_next = True 
+
+# Run this loop until we break it
+while exists_next:
+	exists_next = False 
+	# pause for 5 seconds every time the loop repeats 
+	time.sleep(5)
+
+	# Download the page we are searching 
+	page_to_search = requests.get(url_to_search) 
+	# Create a Beautiful Soup object 
+	soup_to_search = BeautifulSoup(page_to_search.content, features="lxml")
+	# Get all the links which are linked to from the page we are searching
+	links = soup_to_search.find_all('a')
+
+	# Go through the links we have found
+	for link in links:
+
+		# add the homepage url to the subdirectory of the link
+		link_url = homepage_url + link.get('href')
+
+		# if the url is a page with data add it to our list
+		if 'places/default/view' in link_url:
+			page_urls.append(link_url)
+		# Otherwise, if this has text and that text includes 'Next', set url_to_search accordingly
+		elif link.string and 'Next' in link.text:
+			url_to_search = link_url
+			exists_next = True
+
+	
+# Create an output csv file
+with open('output.csv', 'w') as file:
+	# Create a writer
+	writer = csv.writer(file)
+	# Create a header row
+	writer.writerow(['url', 'Country', 'Population', 'Area'])
+
+	# For each country page
+	for url in page_urls:
+		# pause as not to exceed the rate limit
+		time.sleep(5)
+		# load the page
+		page = requests.get(url)
+		# create soup
+		soup = BeautifulSoup(page.content, features='lxml')
+
+		# create variables for each data point
+		country = ''
+		area = ''
+		population = ''
+
+		# for each tr tag
+		for row in soup.find_all('tr'):
+			# for each data entry in that row
+			for entry in row.find_all('td'):
+				# check for the class of intrest
+				if (entry['class'][0] == 'w2p_fw'):
+					# save data if it is what we are looking for
+					if row['id'] == 'places_area__row':
+						area =  entry.text
+					elif row['id'] == 'places_population__row':
+						population =  entry.text
+					elif row['id'] == 'places_country__row':
+						country =  entry.text	
+		# Write the data to the csv
+		writer.writerow([url, country, population, area])
+~~~
 
 
