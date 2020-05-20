@@ -4,19 +4,25 @@ _This workflow will cover some of the basics of Beautiful Soup by working throug
 _Last updated May 2020_
 ***
 ### Set up:
-1. The first step is to install some dependencies for Beautiful Soup. First make sure that you have Python 3 on your machine. Then, open a new terminal and type the commands:
+1. Open a new document in a text editor of your choice. You should save the file as a Python document by using the extension ".py". I will refer to my document as "scraping.py."
+2. Open a new terminal an navigate to the directory where you saved your Python document using the command 'ls' to list directories and the command 'cd' to change directories. 
+3. Install the dependencies for Beautiful Soup. First make sure that you have Python 3 on your machine. In terminal type the commands:
     ~~~
     python3 -m pip install requests
     python3 -m pip install bs4
     python3 -m pip install lxml
     ~~~
     If you get a _permission denied_ error preface each command with the word "sudo". This will prompt you to enter your password to install dependencies.
-2. Now, open a new document in a text editor of your choice. You should save the file as a Python document by using the extension ".py". I will refer to my document as "scraping.py."
-3. Include the folling at the begining of your document:
+4. Add the following to the begining of your document:
     ~~~
     import requests
     from bs4 import BeautifulSoup
     ~~~
+5. Throughout your project you will want to run your code to debug it, test it, and finally use it to gather your data set. To run your code type this command in terminal:
+    ~~~
+    python3 scraping.py
+    ~~~
+    Any printed output will apear in terminal.
 ### Using Beautiful Soup
 #### 1. Compiling a list of URLs
 Often, you will want to scrape data from a number of pages which are all linked to from a homepage. The first step is to scrape a list of links from the home page.
