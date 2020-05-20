@@ -4,15 +4,15 @@ _This workflow will cover some of the basics of Beautiful Soup by working throug
 _Last updated May 2020_
 ***
 ### Set up:
-* The first step is to install some dependencies for Beautiful Soup. First make sure that you have Python 3 on your machine. Then, open a new terminal and type the commands:
+1. The first step is to install some dependencies for Beautiful Soup. First make sure that you have Python 3 on your machine. Then, open a new terminal and type the commands:
     ~~~
-    pip install requests
-    pip install bs4
-    pip install lxml
+    python3 -m pip install requests
+    python3 -m pip install bs4
+    python3 -m pip install lxml
     ~~~
     If you get a _permission denied_ error preface each command with the word "sudo". This will prompt you to enter your password to install dependencies.
-* Now, open a new document in a text editor of your choice. You should save the file as a Python document by using the extension ".py". I will refer to my document as "scraping.py."
-* Include the folling at the begining of your document:
+2. Now, open a new document in a text editor of your choice. You should save the file as a Python document by using the extension ".py". I will refer to my document as "scraping.py."
+3. Include the folling at the begining of your document:
     ~~~
     import requests
     from bs4 import BeautifulSoup
@@ -45,7 +45,7 @@ Often, you will want to scrape data from a number of pages which are all linked 
     ~~~
     for link in links:
         # print just the url that the link links to
-        print link.get('href')
+        print (link.get('href'))
     ~~~
     ![urls](/Images/BeautifulSoup/urls.png)
 * Looking at the urls we have gathered we can make some observations. First of all, notice that each url we printed was just a subdirectory with no domain. We can remedy this by simply adding the domain (the homepage url) back to each url. Next, we notice that the first five urls (homepage, register, login, index, and search) are to pages we don't care about. The final link is to the next page of countries. The only urls we actually want to save are those which include "/places/default/view/". This step will look different for each project, because you will need to sort your urls in a way that is specific to the data you are looking for. For this website, we can simply sort for urls which contain "/places/default/view/". 
@@ -99,7 +99,7 @@ Often, you will want to scrape data from a number of pages which are all linked 
     
     #Print each page url
     for page_url in page_urls:
-    	print page_url
+    	print (page_url)
     ~~~
 #### 2. Scraping data from each page
 Now we want to scrape data from each page in page_urls. This process will look similar to the way we scraped the index pages. 
@@ -112,7 +112,7 @@ Now we want to scrape data from each page in page_urls. This process will look s
     # create soup
     soup = BeautifulSoup(afghanistan_page.content, features='lxml')
     # format and print html
-    print soup.prettify()
+    print (soup.prettify())
     ~~~
     A portion of the resulting html found by searching for "population":
     ![html](/Images/BeautifulSoup/html.png)
@@ -126,14 +126,14 @@ Now we want to scrape data from each page in page_urls. This process will look s
     		if (entry['class'][0] == 'w2p_fw'):
     			# print data if it is what we are looking for
     			if row['id'] == 'places_area__row':
-    				print 'Area:'
-    				print entry.text
+    				print ('Area:')
+    				print (entry.text)
     			elif row['id'] == 'places_population__row':
-    				print 'Population:'
-    				print entry.text
+    				print ('Population:')
+    				print (entry.text)
     			elif row['id'] == 'places_country__row':
-    				print 'Country:'
-    				print entry.text    
+    				print ('Country:')
+    				print (entry.text)  
     ~~~
     This code prints out the data for Afghanistan: 
     ![Afghanistan](/Images/BeautifulSoup/Afghanistan.png)
@@ -271,5 +271,3 @@ with open('output.csv', 'w') as file:
 		# Write the data to the csv
 		writer.writerow([url, country, population, area])
 ~~~
-
-
