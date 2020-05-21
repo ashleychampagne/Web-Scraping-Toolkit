@@ -13,7 +13,7 @@ _Last updated May 2020_
     python3 -m pip install lxml
     ~~~
     If you get a _permission denied_ error preface each command with the word "sudo". This will prompt you to enter your password to install dependencies.
-4. Add the following to the begining of your document:
+4. Open the text file you created. Add the following to the begining of your document:
     ~~~
     import requests
     from bs4 import BeautifulSoup
