@@ -149,6 +149,7 @@ Now we want to scrape data from each page in page_urls. This process will look s
 Finally, we want to use a loop to scrape data from every page we found. 
 * Add "import csv" to the dependecies at the beggining of your code
 * Write csv rows one at a time using the writerow function. This function takes a row of values to be included in the row. 
+* An output file will be written to the directory your Python document is saved in by default.
 * For our example site, the code looks like this. This code takes about 25 minutes to run due to the 5 second pause between scraping each page. 
     ~~~
     # Create an output csv file
