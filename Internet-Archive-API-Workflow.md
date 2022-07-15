@@ -65,3 +65,5 @@ wget -r -H -nc -np -nH --cut-dirs=1 -A .txt -e robots=off -l1 -i ./itemlist.txt 
 * To download all files except specific formats (this example txt), you should include the -R option (or “reject”):
 wget -r -H -nc -np -nH --cut-dirs=1 -R .txt -e robots=off -l1 -i ./itemlist.txt -B 'http://archive.org/download/'
 Enter the command of your choice and hit “run.” It may take awhile for the program to run. In this example, it took me about two hours to complete it. Just leave your computer on and connected to your power cord, and it should be fine.
+
+* If at any point you'd like to cancel a download process that is taking too long or was initiated in error,  Ctrl+C should quit the process. You can also force quit the Terminal itself, which will have the same effect. 
