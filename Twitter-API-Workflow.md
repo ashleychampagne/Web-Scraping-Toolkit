@@ -48,6 +48,9 @@ From this tab, you can now see the top tweeters who have been using the hashtag 
 
 ### In the “Summary” sheet, you can see more detailed information on tweets within your search.
 
+(Note: If your Dashboard and Summary pages are not populating with information, make sure you've turned on
+the "Sheet Calculation" slider in the top right of each page.)
+
 You can also view your data in two additional ways: 
 * with the TAGS Archive (a searchable archive of tweets) 
 * the TAGS Explorer (a network visualization). 
