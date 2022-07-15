@@ -32,6 +32,7 @@ _This workflow will allow you to split the contents of a spreadsheet into severa
     ~~~
     cd Desktop/data
     ~~~
+* Alternately, you can open a Terminal directly at the folder by right clicking on the folder and selecting "New Terminal at Folder" from the drop-down menu. 
 * If you type "ls" and press enter you should see the name of your .txt document
     ![terminal](Images/split/terminal.png)
 * Type or copy into terminal the command:
@@ -39,6 +40,12 @@ _This workflow will allow you to split the contents of a spreadsheet into severa
     split -a4 -l1 my_data.txt row
     ~~~
 * You're done! Navigate to your folder and confirm that a .txt file has been created for each row of your spreadsheets. The filed for rows 1, 2, ..., 456976 will be named rowaaaa.txt, rowaaab.txt, ..., rowzzzz.txt respectively. 
+* Note also that "row" is just a name to use for naming the files created. If you wanted to name your files something else, you could. For instance: 
+    ~~~
+    split -a4 -l1 my_data.txt museumentry
+    ~~~
+    Would create files labelled with "museumentry" rather than "row." 
+    
 ##### Step 3 on Microsoft Windows:
 * [Install Git for Windows](https://git-scm.com/download) if you have not already
 * Open Windows command line (DOS)
