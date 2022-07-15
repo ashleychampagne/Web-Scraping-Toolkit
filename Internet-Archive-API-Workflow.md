@@ -46,6 +46,8 @@ We need to create a text file with the list of archive.org item identifiers from
 1. Open the file in a text editor like TextEdit or Atom. Delete the first line which reads “identifier.” Now, remove all quotes by searching and replacing “ with nothing.
 Your itemlist.txt file should look like this:
 
+![itemlist](/Images/Itemlist Example.png)
+
 ## Use wget to return the full text results from your itemlist.txt file
 Open your terminal window and navigate to your “Internet_Archive” folder. This can be done in a few steps.
 1. Open your command line
