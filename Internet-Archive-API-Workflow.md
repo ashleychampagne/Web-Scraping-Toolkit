@@ -36,7 +36,7 @@ We need to create a text file with the list of archive.org item identifiers from
 
 1. Once you’ve figured out your search, go the “Advanced Search returning JSON, XML, and more” section to create your query. Select “identifier” from the “Fields to return” list. Optionally sort the results by “identifier asc”
 
-1. Enter the number of results from step 1 into the “Number of results” box that matches (or is higher than) the number of results your query returns.
+1. Enter the number of results from step 1 into the “Number of results” box. If you want to pull every file returned by your search, enter a number higher than the number of results. If you just want to test the process, enter a low number. Beware, though, that some of the files in your query are actually folders and may contain yet more files within them. 
 
 1. Choose the “CSV format” button.
 
