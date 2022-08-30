@@ -3,7 +3,8 @@ _This workflow will guide you through the process of using the [Twint library](h
 ***
 ### Is Twint the Right Tool for my Project?
 Twint is fundamentally more technical and less user friendly than [the Twitter API](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Twitter-API-Workflow.md). Therefore, you should use the Twitter API when possible to save yourself work. That said, Twint offers fewer restrictions than the API. Use Twint if:
-* You need to mine tweets that are more than a week old. The Twitter API only allows you to access tweets from the last week or to set criteria to record future tweets as they are published. (IMPORTANT DISCLAIMER: as of July of 2022, Twint is not working to collect large numbers of historical tweets. Although it is able to go beyond the standard search window, some changes to the Twitter API have limited it to collecting only a few tweets from that window. It is still therefore a viable option for collecting a small dataset/performing historical searches, but if you want to pull large numbers of historical tweets it would be best to look elsewhere for now. Check out our Melanie Walsh's writeup of one alternative, twarc, [here.](https://melaniewalsh.github.io/Intro-Cultural-Analytics/04-Data-Collection/12-Twitter-Data.html))
+* You need to mine tweets that are more than a week old. The Twitter API only allows you to access tweets from the last week or to set criteria to record future tweets as they are published. 
+    * *IMPORTANT DISCLAIMER:* as of July of 2022, Twint is not working to collect large numbers of historical tweets. Although it is able to go beyond the standard search window, some changes to the Twitter API have limited it to collecting only a few tweets from that window. It is still therefore a viable option for collecting a small dataset/performing historical searches, but if you want to pull large numbers of historical tweets it would be best to look elsewhere for now. Check out our Melanie Walsh's writeup of one alternative, twarc, [here.](https://melaniewalsh.github.io/Intro-Cultural-Analytics/04-Data-Collection/12-Twitter-Data.html)
 * You need to collect more than 3,200 tweets. The Twitter API will return a maximum of 3,200 tweets.
 * You want to be anonymous. The Twitter API requires you to sign in with a Twitter account.
 * You don't want rate limitations. If you want to use a tool programatically (in code), the Twitter API will impose rate limitations.
@@ -11,15 +12,34 @@ Twint is fundamentally more technical and less user friendly than [the Twitter A
 If your project can be completed by gathering no more than 3,200 tweets from the past week and/or the future and you're not worried about anonymity or rate limitations then you should use [the Twitter API](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Twitter-API-Workflow.md). Otherwise, continue onward to learn how to use Twint.
 If you're interested, [here](https://www.youtube.com/watch?v=jzLJjbZVQ9s) is a video that expains most of the information covered in this workflow.
 ### Set Up:
-* Install Python 3.6 if you don't already have it. You can find it [here](https://www.python.org/downloads/).
+* Install Python if you don't already have it. You can find it [here](https://www.python.org/downloads/). This tutorial was last updated at Python version 3.10. 
 * If you have not already, [install git](https://git-scm.com/downloads).
 * Open a new terminal. Enter the following commands one at a time.
     ~~~
     git clone https://github.com/twintproject/twint.git
     cd twint
+    pip3 install aiohttp==3.7.0
     pip3 install . -r requirements.txt
     ~~~
     This last command may take a number of minutes to execute. Your computer is accessing all of the Python libraries that Twint uses to mine Twitter data.
+    
+    Now search for and open the file `cli.py` which will have been downloaded to your computer as part of the installation, inside a folder named `twint`. Open the file using a text editor and scroll to the very bottom of the file. You should see the following code a few lines up from the bottom: 
+    
+    ```
+    if float(version) < 3.6:
+        print("[-] TWINT requires Python version 3.6+.")
+        sys.exit(0)
+    ```
+    We need to comment this out to get Twint to work with our version of python. To do so, simply add a number sign character (hashtag) at the beginning of each line, so that it looks like this:
+    ```
+    #if float(version) < 3.6:
+        #print("[-] TWINT requires Python version 3.6+.")
+        #sys.exit(0)
+    ```
+    
+    Now save and close the file. You are ready to continue!
+    
+    
 ### Using Twint:
 Now you're ready to begin searching Twitter and scraping Twitter data. Twint offers a variety if search parameters. For example, you can search for tweets from a specific user, time frame, geolocation, and/or for tweets containing specific words or phrases. You can combine multiple parameters to make your search more specific and useful. A full list of Twint's parameters and options can be found [here](https://github.com/twintproject/twint/wiki/Basic-usage). This workflow will proceed to explain how make a Twint search, explain some of the most useful parameters, and give a few examples.
 ##### Making a Twint Search
@@ -50,6 +70,7 @@ To use Twint, type "twint" into terminal followed by your search parameter. Type
     ~~~
     twint -s "spacex" -g "28.562115,-80.577587,2km" --since "2020-01-13 13:13:59"
     ~~~
+    Note: as mentioned earlier, the time range that Twint can scrape has been narrowed by changes in Twitter's API. Though you can still scrape historical tweets, it may only scrape about a day or so from the start of your time range. 
 ##### Saving the results
 So far we have only seen results printed in Terminal. You can have them automatically saved to a file using "-o". Add "-o" and a file name to your command and your results will be saved to that file. For example, the following command accesses all of the tweets from Elon Musk that mention the word spacex and saves them into a file called tweets.txt:
 ~~~
@@ -59,6 +80,9 @@ You can also save your results as a csv file (easily opened as a spreadsheet). T
 ~~~
 twint -u elonmusk -s "spacex" -o "tweets.csv" --csv
 ~~~
+
+Be wary that these files save to your user folder and so will usually require a search to find!
+
 ### Separating each tweet into a text file:
 If you want to split each tweet into its own text file, follow the instructions above to save the tweets into a .txt file. Then, begin on step 3 of [this workflow](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Spreadsheet-Splitting-Workflow.md).
     
