@@ -5,10 +5,11 @@ This workflow will help you use beautiful soup in Python to put together useful 
 This workflow will not be comprehensive by any means, but the goal is to cover enough to get you through a simple data collection project or to get you started with a larger project. It will assume some very basic Python programing knowledge such as how for loops and if statements work. To an extent, code in this workflow will sacrifice programming style to be as readable as possible for people with minimal Python experience. Rather than tackling one large complex task, it will go through a few simple but useful ways to use Beautiful Soup to scrape information from webpages. The full documented code is available at the bottom of this page should you want to see everything together.
 
 ## Set up:
-You will have to have installed python to follow this tutorial. You can download python [here.](https://www.python.org/downloads/) 
-Open a new document in a text editor of your choice. You should save the file as a Python document by using the extension ".py". I will refer to my document as "scraping.py."
-Open a new terminal and navigate to the directory where you saved your Python document using the command `ls` to list directories and the command `cd` to change directories. (On Mac, you can simply navigate to the folder in which your scraping.py document exists and right click on the folder. From the dropdown, select “New Terminal at Folder.) You’ll know you have the correct folder when the name of the folder appears in the Terminal window before the prompt.
-Install the dependencies for Beautiful Soup. First make sure that you have Python 3 on your machine. In terminal type the commands:
+You will have to have installed python to follow this tutorial. You can download python [here.](https://www.python.org/downloads/) This tutorial was written with version 3.10. 
+Open a new document in a text editor of your choice. You should save the file as a Python document by naming it "scraping.py" and saving it to your Documents folder.
+Open Terminal if you are using Mac or Command Prompt if you are on PC. It will start you in your base folder on your computer. Navigate to your Documents folder by typing `cd Documents` to change directories. (On Mac, you can instead simply right click on the Documents folder. From the dropdown, select “New Terminal at Folder.) You’ll know you have the correct folder when the name of the folder appears in the Terminal window in front of the cursor.
+
+Into the Terminal or Command Prompt window you can now type these three commands, pressing return after each line and allowing it to run:
 
 ```
 python3 -m pip install requests
@@ -18,7 +19,7 @@ python3 -m pip install lxml
 
 If you get a permission denied error preface each command with the word `sudo`. This will prompt you to enter your password to install dependencies.
 
-Now open the text file you created. Add the following to the beginning of your document:
+Now open that text file you created named "scraping.py". Add the following to the beginning of your document:
 
 ```
 import requests
@@ -26,13 +27,13 @@ import time
 from bs4 import BeautifulSoup
 ```
 
-Throughout your project you will want to run your code to debug it, test it, and finally use it to gather your data set. To run your code type this command into terminal:
+Throughout your project you will want to run your code to debug it, test it, and finally in order to use it to gather your data set. To run your code type this command into terminal:
 
 ```
 python3 scraping.py
 ```
 
-This will run the file named "scraping.py". Any printed output will appear in the terminal.
+This will run the file named "scraping.py". Any printed output will appear in the terminal. Now we can get to scraping!
 
 # Using Beautiful Soup.
 
