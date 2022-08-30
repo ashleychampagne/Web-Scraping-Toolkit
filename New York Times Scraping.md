@@ -14,7 +14,7 @@ This workflow requires you to run pre-written python programs in order to search
 * Now you have everything set up to run these scripts! 
 
 ### NYT API Key 
-* You will also need an API key from the NYT. Follow the instructions to create a developer account. Once you are signed in, go to the "My Apps" page [here.](https://developer.nytimes.com/my-apps) 
+* You will also need an API key from the NYT. Follow the sign up process [here](https://developer.nytimes.com/) to create a developer account. Once you are signed in, go to the "My Apps" page [here.](https://developer.nytimes.com/my-apps) 
 * Click the "+ New App" button in the top right corner. Give your project a name and make sure to Enable the Article Search API. Click save, and you should be brought to a screen that looks like this: 
 ![NYT site](Images/NYT/nytsite.png)
 * Copy the API Key circled in the image above by clicking the little button with two squares to the right of it. Put this in a note document where it will be convenient to access. 
