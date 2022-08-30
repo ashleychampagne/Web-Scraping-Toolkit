@@ -5,7 +5,7 @@ _This workflow will guide you through the process of using the [Twint library](h
 Twint is fundamentally more technical and less user friendly than [the Twitter API](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Twitter-API-Workflow.md). Therefore, you should use the Twitter API when possible to save yourself work. That said, Twint offers fewer restrictions than the API. Use Twint if:
 * You need to mine tweets that are more than a week old. The Twitter API only allows you to access tweets from the last week or to set criteria to record future tweets as they are published. 
     * *IMPORTANT DISCLAIMER:* as of July of 2022, Twint is not working to collect large numbers of historical tweets. Although it is able to go beyond the standard search window, some changes to the Twitter API have limited it to collecting only a few tweets from that window. It is still therefore a viable option for collecting a small dataset/performing historical searches, but if you want to pull large numbers of historical tweets it would be best to look elsewhere for now. Check out our Melanie Walsh's writeup of one alternative, twarc, [here.](https://melaniewalsh.github.io/Intro-Cultural-Analytics/04-Data-Collection/12-Twitter-Data.html)
-* You need to collect more than 3,200 tweets. The Twitter API will return a maximum of 3,200 tweets.
+* You need to collect more than 3,200 tweets. The Twitter API will return a maximum of 3,200 tweets. (This function has also been impacted by the disclaimer above.)
 * You want to be anonymous. The Twitter API requires you to sign in with a Twitter account.
 * You don't want rate limitations. If you want to use a tool programatically (in code), the Twitter API will impose rate limitations.
 
