@@ -1,6 +1,8 @@
 # Guardian Collection Workflow
 
-This workflow will take you through the process of getting access to, searching, and finally collecting data from The Guardian's database.  
+This workflow will take you through the process of getting access to, searching, and finally collecting data from The Guardian's database. 
+
+_Last Updated Aug 2022_ 
 
 ## Getting Access and Searching the Database
 
