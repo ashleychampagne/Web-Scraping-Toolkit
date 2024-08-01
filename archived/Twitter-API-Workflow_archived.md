@@ -1,4 +1,5 @@
 # Scrape Twitter with TAGS 
+_Last updated July 2022_
 
 The ability to collect, archive and analyze social media posts is a useful skill. It can be important to study what people are writing on twitter on a larger scale than manually searching hashtags or usernames. One way to scrape content is by using the Twitter Archiving Google Spreadsheet developed by Martin Hawksey that allows you to collect tweets, up to seven days in the past and tweets written in the future. Specifically, the tool allows you to:
 
