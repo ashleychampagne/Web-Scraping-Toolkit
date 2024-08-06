@@ -20,11 +20,11 @@ When the Guardian's API console search form loads, check the box in that form fo
 
 At the bottom of the Guardian API Console web page, you'll instantly see a live view of the results returned by your search. It should look something like this: 
 
-![Search results picture](Images/Guardian/search.png)
+![Search results picture](../Images/Guardian/search.png)
 
 Click on the blue link between the search field and the search results. This will take you to a page with a big block of text. Save this page either with Right Click => Save As or just Command + S. Give the file the name `query_result.json` and save it to a folder with a name like "Guardian Search."
 
-![saving json](Images/Guardian/renaming.png)
+![saving json](../Images/Guardian/renaming.png)
 
 ## Collecting Articles 
 
@@ -50,4 +50,4 @@ python3 guardian_scraping.py
 The program is finished when it prints into the terminal the phrase "Scraping Done!" 
 From your file browser, double click to open the `guardian_results.csv` file. It should now be populated with the articles from your search results, complete with dates, titles, urls, and the article's full text! 
 
-![final results](Images/Guardian/final.png)
+![final results](../Images/Guardian/final.png)
