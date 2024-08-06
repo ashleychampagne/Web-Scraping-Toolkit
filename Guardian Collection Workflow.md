@@ -20,7 +20,7 @@
 
   In a web browser, go to the URL of the *Guardian's* "Open Platform API Console" (beta version, not the old version): [http://open-platform.theguardian.com/explore/](http://open-platform.theguardian.com/explore/)
 
-  [![The Guardian&\#39;s API Console][image1]](http://open-platform.theguardian.com/explore/)
+  ![The Guardian's API Console](Images/Guardian/Guardian_API_UI.png)
 
   When the *Guardian's* API console search form loads, check the box in that form for "Show All Filters."  Then fill in the following fields in the form:
 
@@ -29,7 +29,7 @@
     * *page-size* (set at 200 to show the maximum number of hits per search-results page)  
     * *from-date* & *to-date* (in the format, e.g., "06-01-2021 to 06-01-2024")  
     * *api-key* (your *Guardian* api key)  
-      At the bottom of the *Guardian* API Console web page, you'll instantly see a live view of the JSON returned by your search parameters, including the URLs for the pages found.  The maximum number of hits on a single search-results page is 199\. Select and copy the JSON results. Copy beginning with the first curly bracket "**{**"  to the last curly bracket" **}**"![JSON results shown in The Guardian&\#39;s API Console][image2]  
+      At the bottom of the *Guardian* API Console web page, you'll instantly see a live view of the JSON returned by your search parameters, including the URLs for the pages found.  The maximum number of hits on a single search-results page is 199\. Select and copy the JSON results. Copy beginning with the first curly bracket "**{**"  to the last curly bracket" **}**"![JSON results shown in The Guardian&\#39;s API Console](Images/Guardian/Guardian_JSON.png)  
       For multiple search-results pages:  
     * The JSON search results start with metadata that includes, the number of the current search-results page and the total number of search-results pages (e.g., current Page: 2, pages: 2). This shows how many total results there are and whether you need to gather the JSON on extra search results pages.  
     * If so, after harvesting the results of one search-results page (by copying the JSON into a "guardian-json" spreadsheet through the process described below), you can use the "page" field in the Guardian API Console's search form to request the next page of search results.  
@@ -56,13 +56,13 @@ Scraping (Phase 1): Initial Scrape
        * Finally, export your results to Excel by asking ChatGPT: “Thank you\! Can you help me export the results to Excel?”  
        * You should see an output like this:
 
-         ![][image3]
+         ![][image3](Images/Guardian/output.jpg)
 
    Open your spreadsheet:
 
    
 
-![][image4]
+![image4](Images/Guardian/scraped_articles.jpg)
 
 ### 3\. Clean your data
 
@@ -78,7 +78,7 @@ Scraping (Phase 1): Initial Scrape
       1. Within the “article body” column, select “Edit Cells” \> “Common transformations” \> “Collapse consecutive whitespace”  
    1. Export your cleaned data as a .xls document. 
 
-**![][image5]**
+**![image5](Images/Guardian/clean_data.png)**
 
 4\. Add a delimiter to separate your articles 
 
