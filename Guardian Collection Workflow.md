@@ -62,7 +62,7 @@ Scraping (Phase 1): Initial Scrape
 
    
 
-![image4](Images/Guardian/scraped_articles.jpg)
+![image4](Images/Guardian/scraped_articles.png)
 
 ### 3\. Clean your data
 
