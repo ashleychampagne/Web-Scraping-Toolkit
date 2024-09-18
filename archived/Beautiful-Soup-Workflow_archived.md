@@ -1,6 +1,8 @@
 # Beautiful Soup Workflow
+
 _This workflow will help you use beautiful soup in Python to put together useful data sets. Beautiful Soup is very open ended and much less user friendly than other tools in this toolkit; Beautiful Soup makes programmatic webscraping easier where as many other tools will do it for you. Unless you are quite comfortable with Python you should check for a more specific tool before you start using Beautiful Soup._
 _This workflow will cover some of the basics of Beautiful Soup by working through the example of scraping data from http://example.webscraping.com/. This workflow will not be comprehensive by any means, but the goal is to cover enough to get you through a simple data collection project or to get you started with a larger project. It will assume some very basic Python programing knowledge such as how for loops and if statements work. To an extend, code in this workflow will sacrifice programming style to be as readible as possible for people with minimal Python experience._
+
 _Last updated May 2020_
 ***
 ### Set up:

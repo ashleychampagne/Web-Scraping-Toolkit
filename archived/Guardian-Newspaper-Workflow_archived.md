@@ -14,7 +14,7 @@ _This page provides instructions for collecting articles from the Guardian. It w
 * Get a Guardian API Key if you don't have one ([request developer key](https://open-platform.theguardian.com/access/)).
 * Search The Guardian using the Guardian's API Console: 
     In a web browser, go to the URL of the Guardian's "Open Platform API Console" (beta version, not the old version): <http://open-platform.theguardian.com/explore/>
-    ![[API_UI](Images/Guardian/Guardian_API_UI.png)](http://open-platform.theguardian.com/explore/)
+    ![[API_UI](../Images/Guardian/Guardian_API_UI.png)](http://open-platform.theguardian.com/explore/)
 * When the Guardian's API console search form loxads, check the box in that form for "Show All Filters."  Then fill in the following fields in the form:
     * search term in double quotes(e.g. "transgender")
     * order-by (choose "oldest")
@@ -24,7 +24,7 @@ _This page provides instructions for collecting articles from the Guardian. It w
 * At the bottom of the Guardian API Console web page, you'll instantly see a live view of the 
 
 returned by your search parameters, including the URLs for the pages found.  The maximum number of hits on a single search-results page is 199. Select and copy the JSON results. Copy beginning with the first curly bracket "{"  to the last curly bracket" }"
-![JSON](Images/Guardian/Guardian_JSON.png)
+![JSON](../Images/Guardian/Guardian_JSON.png)
 * For multiple search-results pages:
     * The JSON search results start with metadata that includes, the number of the current search-results page and the total number of search-results pages (e.g., current Page: 2, pages: 2). This shows how many total results there are and whether you need to gather the JSON on extra search results pages.
     * If so, after harvesting the results of one search-results page (by copying the JSON into a "guardian-json" spreadsheet through the process described below), you can use the "page" field in the Guardian API Console's search form to request the next page of search results.
@@ -43,12 +43,12 @@ returned by your search parameters, including the URLs for the pages found.  The
 * Save your extracter as a name you’ll recognize in the future.
 * Once you’ve saved your extractor, it should appear within the right hand side of your browser. Click the extractor and click “settings” on the page.
 * Click “extract from an explicit list of URLs” and upload your CSV or Excel XLSX file of urls. 
-![URLs](Images/Guardian/import.io_urls.png)
+![URLs](../Images/Guardian/import.io_urls.png)
 * Click “run URLs” to have the extractor crawl through every URL in the same way you originally trained it.
 * Download the data as a .xlsx file.
-![results](Images/Guardian/import.io_results.png)
+![results](../Images/Guardian/import.io_results.png)
 * Open your spreadsheet:
-![spreadsheet](Images/Guardian/spreadsheet.png)
+![spreadsheet](../Images/Guardian/spreadsheet.png)
 #### 3. Clean your data: Use OpenRefine to convert the dates to eliminate unwanted whitespace.
 1. Open the OpenRefine interface:
     * On a Windows machine: Open the “C:/openrefine-win-2.6-rc2/openrefine-2.6-rc2” folder in your system and run “openrefine.exe” by clicking on the named file twice to open the OpenRefine interface at the address 127.0.0.1:3333 (you can always navigate back to the OpenRefine interface by pointing your browser to this address, and can even use it in multiple windows using it).
@@ -62,7 +62,7 @@ returned by your search parameters, including the URLs for the pages found.  The
     * Open that column's drop down menu, and select "Edit Cells" > "Common transformations" > "trim leading and trailing whitespace”. 
     * Within the “article body” column, select “Edit Cells” > “Common transformations” > “Collapse consecutive whitespace”
 5. Export your cleaned data as a .xls document. 
-![clean_data](Images/Guardian/clean_data.png)
+![clean_data](../Images/Guardian/clean_data.png)
 
 #### 4. Separate the texts into individual plain text files for text analysis 
 
@@ -76,4 +76,4 @@ When Word shows the dialogue for conversion to plain text, choose "other encodin
 You can use [Lexos](http://lexos.wheatoncollege.edu/upload) to cut your plain text file at the delimiter (@@@@@@@@@@), and then download the cut files into individual plain text documents. The value of this is that you can now explore the corpus you’ve created down to the document level. 
 1. Finally, check the folder icon at the top of the Lexos page. Do you see your files? Download your files. You should now have a folder with individual plain text files of each document. 
 
-![lexos](Images/Guardian/lexos.png)
+![lexos](../Images/Guardian/lexos.png)

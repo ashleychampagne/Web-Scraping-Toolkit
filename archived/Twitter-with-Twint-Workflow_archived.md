@@ -1,5 +1,5 @@
 # Mining Twitter Data with Twint Workflow
-_This workflow will guide you through the process of using the [Twint library](https://github.com/twintproject/twint) to mine data from Twitter. Last updated April 2020._
+_This workflow will guide you through the process of using the [Twint library](https://github.com/twintproject/twint) to mine data from Twitter. Last updated August 2022._
 ***
 ### Is Twint the Right Tool for my Project?
 Twint is fundamentally more technical and less user friendly than [the Twitter API](https://github.com/ashleychampagne/Web-Scraping-Toolkit/blob/master/Twitter-API-Workflow.md). Therefore, you should use the Twitter API when possible to save yourself work. That said, Twint offers fewer restrictions than the API. Use Twint if:
