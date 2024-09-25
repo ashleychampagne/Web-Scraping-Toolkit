@@ -47,7 +47,7 @@ The updated code demonstrates the following procedures:
 
 ## Example Scripts
 
-The abstracted code can be found in the `nyt_archives_api` folder. Below is a brief explanation of the code structure:
+The abstracted code can be found in the [`nyt_archives_api`](https://github.com/Brown-University-Library/geodata_api_tutorials/tree/main/nytimes) folder in Frank Donnelly's API tutorials repository. Below is a brief explanation of the code structure:
 
 ### nyt_archives_api
 
