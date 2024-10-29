@@ -26,13 +26,13 @@ To run these programs, you will need to:
     - If using Anaconda, the Requests module may already be included.
 
 3. **Get an API key**:
-    - You will also need an API key from the NYT. Follow the sign up process [here](https://developer.nytimes.com/) to create a developer account. Once you are signed in, go to the "My Apps" page [here.](https://developer.nytimes.com/my-apps) 
-    - Click the "+ New App" button in the top right corner. Give your project a name and make sure to Enable the Article Search API. Click save, and you should be brought to a screen that looks like this: 
+    - You will also need an API key from the NYT. Follow the sign up process [here](https://developer.nytimes.com/) to create a developer account. Once you are signed in, go to the "Apps" page dropdown under your username or [here.](https://developer.nytimes.com/my-apps) 
+    - Click the "+ New App" button in the top right corner. Give your project a name and make sure to enable both the Archive and the Article Search APIs. Click save, and you should be brought to a screen that looks like this: 
     ![NYT site](Images/NYT/nytsite.png)
     - Take note of any restrictions on the number of requests you can make.
 
 4. **Save your API key**:
-    - Store your API key in a plain text file (`nyt_key.txt`), as the script will read it from this file.
+    - Store your API key in a plain text file (`nyt_key.txt`), as the script will read it from this file. Store the API key in the same folder where you will download the python script (seee Instructions step 2.)
 
 ## Concepts Demonstrated in the Example
 
@@ -73,4 +73,4 @@ This script demonstrates:
 
 ## Special Credits
 
-This project is based on the original work by Frank Donnelly, GIS and Data Librarian at Brown University Library. The current version includes abstractions to ensure easier management and extensibility.
+This project is based on the original work by Frank Donnelly, Head of GIS and Data Services at Brown University Library. The current version includes abstractions to ensure easier management and extensibility.
